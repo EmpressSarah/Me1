@@ -9,13 +9,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-image: url('https://i.imgur.com/UPNVk9H.jpeg'); /* Red background image */
+      background-image: url('https://i.imgur.com/UPNVk9H.jpeg'); /* Background image */
       background-size: cover;
       background-position: center;
       font-family: 'Roboto', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Dark overlay to make text more readable */
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 30px;
       text-align: center;
-      padding: 20px;
-      color: #fff; /* Default text color */
     }
 
     h1 {
@@ -33,10 +52,13 @@
       color: #ecf0f1;
     }
 
-    .container {
-      width: 80%;
-      margin: 0 auto;
+    /* Card Layout */
+    .category {
+      margin-top: 30px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
       padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     }
 
     /* Social Links container */
@@ -48,24 +70,42 @@
       margin-bottom: 30px;
     }
 
-    /* Button styling */
+    /* Button Styling */
     a {
-      padding: 12px 24px;
+      padding: 14px 28px;
       text-decoration: none;
       background: linear-gradient(45deg, #e74c3c, #c0392b); /* Red gradient */
       color: white;
-      border-radius: 8px;
+      border-radius: 50px;
       font-weight: bold;
       font-size: 18px;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      margin: 5px;
+      margin: 10px;
+      display: inline-block;
     }
 
     a:hover {
       background: linear-gradient(45deg, #c0392b, #e74c3c);
+      transform: scale(1.1);
       color: #fff;
-      transform: translateY(-2px);
+    }
+
+    /* Throne Button Styling */
+    .throne-button {
+      background: linear-gradient(45deg, #f39c12, #e67e22); /* Golden gradient */
+      font-size: 20px;
+      font-weight: bold;
+      padding: 16px 32px;
+      border-radius: 50px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .throne-button:hover {
+      background: linear-gradient(45deg, #e67e22, #f39c12);
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     }
 
     i {
@@ -79,27 +119,28 @@
       margin-top: 30px;
     }
 
-    .category {
-      margin-top: 20px;
-    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .social-links {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-    /* Style to make Throne button more prominent */
-    .throne-button {
-      background: linear-gradient(45deg, #f39c12, #e67e22); /* Golden gradient */
-      font-size: 20px;
-      font-weight: bold;
-      padding: 14px 28px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
+      a {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0;
+      }
 
-    .throne-button:hover {
-      background: linear-gradient(45deg, #e67e22, #f39c12);
-      transform: translateY(-2px);
+      .category {
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="overlay"></div> <!-- Overlay for dark background -->
+  
   <div class="container">
     <h1>Sarah's Heaven</h1>
     <p>Click the icons below to follow me on various platforms:</p>
@@ -141,9 +182,4 @@
 
     <!-- SFW Subreddits Section -->
     <div class="category">
-      <h2>SFW Subreddit</h2>
-      <a href="https://www.reddit.com/r/SelfieHeaven" target="_blank">r/SelfieHeaven</a><br>
-    </div>
-  </div>
-</body>
-</html>
+      <h2>SFW Sub
