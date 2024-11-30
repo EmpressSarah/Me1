@@ -3,190 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarah's Heaven</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="description" content="Welcome to the Kinky Empire of Empress Sarah. Explore links to her world of domination.">
+  <title>Empress Sarah's Kinky Empire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background-image: url('https://i.imgur.com/UPNVk9H.jpeg'); /* Background image */
-      background-size: contain; /* Ensure the full image is visible */
-      background-position: center;
-      background-repeat: no-repeat; /* Prevent repeating the image */
-      font-family: 'Roboto', sans-serif;
-      color: #fff;
       margin: 0;
-      padding: 0;
-      position: relative;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(to bottom, #2c003e, #a83279);
+      overflow-x: hidden;
     }
 
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* Slight overlay to improve readability */
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 30px;
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
       text-align: center;
+      margin: 0;
     }
 
     h1 {
-      font-family: 'Lobster', cursive;
-      color: #fff;
-      font-size: 48px;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      color: #ecf0f1;
-    }
-
-    /* Card Layout */
-    .category {
-      margin-top: 30px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: none; /* Removed shadows for a cleaner look */
-    }
-
-    /* Social Links container */
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    /* Button Styling */
-    a {
-      padding: 16px 32px;
-      text-decoration: none;
-      background: linear-gradient(45deg, #e74c3c, #c0392b); /* Shades of red for buttons */
-      color: white;
-      border-radius: 50px;
+      font-size: 3rem;
       font-weight: bold;
-      font-size: 18px;
-      transition: all 0.4s ease;
-      margin: 10px;
-      display: inline-block;
-    }
-
-    a:hover {
-      background: linear-gradient(45deg, #c0392b, #e74c3c);
-      transform: scale(1.1);
-      color: #fff;
-    }
-
-    /* Spoil Me Button Styling */
-    .throne-button {
-      background: linear-gradient(45deg, #f39c12, #e67e22); /* Golden gradient */
-      font-size: 24px;
-      font-weight: bold;
-      padding: 20px 40px;
-      border-radius: 50px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-      margin-top: 40px;
-    }
-
-    .throne-button:hover {
-      background: linear-gradient(45deg, #e67e22, #f39c12);
-      transform: scale(1.1);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    }
-
-    i {
-      margin-right: 8px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     h2 {
-      font-family: 'Lobster', cursive;
-      font-size: 30px;
-      color: #fff;
-      margin-top: 30px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      animation: fadeIn 3s ease-in-out;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .social-links {
-        flex-direction: column;
-        gap: 10px;
-      }
+    .intro {
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-      a {
-        width: 100%;
-        padding: 12px;
-        margin: 5px 0;
-      }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
 
-      .category {
-        padding: 15px;
+    .link {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .link:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: #2c003e;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div> <!-- Overlay for dark background -->
-  
-  <div class="container">
-    <h1>Sarah's Heaven</h1>
-    <p>Click the icons below to follow me on various platforms:</p>
+  <header class="intro">
+    <h1>Welcome to the World of Domination</h1>
+    <h2>The Era of Empress Sarah</h2>
+    <p>Keep your head low and stay on your knees while being introduced to the Kinky Empire.</p>
+  </header>
 
-    <!-- Social Links in Horizontal Row -->
-    <div class="social-links">
-      <a href="https://www.twitter.com/sarahxdollfield" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-      <a href="https://www.instagram.com/gore.fae" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://discord.gg/YRyvrvYS" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-      <a href="https://bsky.app/profile/empresssarah.bsky.social" target="_blank"><i class="fab fa-twitter"></i> Bluesky</a>
-      <a href="https://t.me/goddessxsara" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-    </div>
+  <section class="links">
+    <a href="https://www.throne.com/goddessxsara96" class="link" target="_blank">Throne</a>
+    <a href="https://www.onlyfans.com/empresssarah" class="link" target="_blank">OnlyFans</a>
+    <a href="https://www.fans.ly/GoddessxSarah" class="link" target="_blank">Fansly</a>
+    <a href="https://www.loyalfans.com/goddessxsarah" class="link" target="_blank">LoyalFans</a>
+    <a href="https://www.reddit.com/user/555GoddessSarah555/" class="link" target="_blank">Reddit</a>
+    <a href="https://discord.gg/dvaVzeujAy" class="link" target="_blank">Discord Server</a>
+    <a href="https://discord.gg/bkMeKe8K" class="link" target="_blank">My Discord Profile</a>
+    <a href="https://t.me/goddessxsara" class="link" target="_blank">Telegram</a>
+    <a href="https://t.me/empresscorner" class="link" target="_blank">Empress Corner</a>
+    <a href="https://t.me/paypigheaven" class="link" target="_blank">PayPigHeaven</a>
+    <a href="https://t.me/chatwithsara" class="link" target="_blank">Chat with Sara</a>
+    <a href="https://bsky.app/profile/empresssarah.bsky.social" class="link" target="_blank">Bluesky</a>
+    <a href="https://x.com/sarahxdollfield?s=21" class="link" target="_blank">X</a>
+  </section>
 
-    <!-- Telegram Links -->
-    <div class="category">
-      <h2>Telegram Channels</h2>
-      <a href="https://t.me/empresscorner" target="_blank">Empress Corner</a><br>
-      <a href="https://t.me/paypigheaven" target="_blank">PayPigHeaven</a><br>
-      <a href="https://t.me/chatwithsara" target="_blank">Chat with Me</a><br>
-    </div>
-
-    <!-- Fansly, OnlyFans, LoyalFans, and Throne Links -->
-    <div class="category">
-      <h2>Exclusive Links</h2>
-      <a href="https://fansly.com/GoddessxSarah" target="_blank">Fansly</a><br>
-      <a href="https://onlyfans.com/empresssarah" target="_blank">OnlyFans</a><br>
-      <a href="https://loyalfans.com/goddessxsarah" target="_blank">LoyalFans</a><br>
-      <a href="https://throne.me/u/goddessxsara96" target="_blank" class="throne-button">Spoil Me</a><br> <!-- Spoil Me Button -->
-    </div>
-
-    <!-- NSFW Subreddits Section -->
-    <div class="category">
-      <h2>NSFW Subreddits</h2>
-      <a href="https://www.reddit.com/r/FeetEden" target="_blank">r/FeetEden</a><br>
-      <a href="https://www.reddit.com/r/PayPigHeaven" target="_blank">r/PayPigHeaven</a><br>
-      <a href="https://www.reddit.com/r/SlaveHeaven" target="_blank">r/SlaveHeaven</a><br>
-      <a href="https://www.reddit.com/r/EdenAssHell" target="_blank">r/EdenAssHell</a><br>
-    </div>
-
-    <!-- SFW Subreddits Section -->
-    <div class="category">
-      <h2>SFW Subreddits</h2>
-      <a href="https://www.reddit.com/r/SelfieHeaven" target="_blank">r/SelfieHeaven</a><br>
-    </div>
-  </div>
+  <footer>
+    &copy; 2024 Empress Sarah. All Rights Reserved.
+  </footer>
 </body>
 </html>
